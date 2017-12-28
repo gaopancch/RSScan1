@@ -47,6 +47,9 @@ public class GenerateFragment extends Fragment {
                 create(view);
             }
         });
+        Bitmap bitmap = EncodingUtils.createQRCode(getString(R.string.app_name),500,500,
+                BitmapFactory.decodeResource(getResources(),R.drawable.saoxianer));
+        image.setImageBitmap(bitmap);
         return contentView;
     }
 
@@ -55,7 +58,7 @@ public class GenerateFragment extends Fragment {
         String result = editText.getText().toString();
         if (!TextUtils.isEmpty(result)){
             Bitmap bitmap = EncodingUtils.createQRCode(result,500,500,
-                    BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher));
+                    BitmapFactory.decodeResource(getResources(),R.drawable.saoxianer));
             image.setImageBitmap(bitmap);
         }else{
             // 提示

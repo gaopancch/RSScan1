@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
     tools:context="com.bandeng2.lilu.rq_scan.GenerateFragment">
 
 
@@ -12,25 +11,30 @@
         android:layout_height="match_parent">
         <EditText
             android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="content" />
-
-        <Button
-            android:id="@+id/button_generate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/editText"
-            android:text="generate" />
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/fragment_generate_input_content" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/editText" />
+        <Button
+            android:id="@+id/button_generate"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/button_generate"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/imageView"
+            android:text="@string/fragment_generate_generate" />
     </RelativeLayout>
 
 

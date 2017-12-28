@@ -14,6 +14,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.bandeng2.lilu.rq_scan.view.QRCodeScanButtonView;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 
 import java.util.regex.Pattern;
@@ -24,9 +25,10 @@ import java.util.regex.Pattern;
  */
 public class SacanFragment extends Fragment {
 
-    private Button buttonToScan;
+    private TextView titleText;
     private View contentView;
     private TextView resultText;
+    private QRCodeScanButtonView qrCodeScanButtonView;
 
 
     public SacanFragment() {
@@ -39,18 +41,21 @@ public class SacanFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         contentView = inflater.inflate(R.layout.fragment_sacan, container, false);
-        buttonToScan = (Button) contentView.findViewById(R.id.button2);
+        titleText = (TextView) contentView.findViewById(R.id.title_text);
         resultText =  (TextView) contentView.findViewById(R.id.result_textView);
-        buttonToScan.setOnClickListener(new View.OnClickListener() {
+        qrCodeScanButtonView = (QRCodeScanButtonView) contentView.findViewById(R.id.qr_button);
+
+        qrCodeScanButtonView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-//                 开启ZXing库中可以扫描的二维码的Activity
+                //                 开启ZXing库中可以扫描的二维码的Activity
                 Intent intent = new Intent(getActivity(), CaptureActivity.class);
                 // 要有返回结果
                 startActivityForResult(intent,1);
             }
         });
+
+
         return contentView;
     }
 

@@ -10,18 +10,39 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <Button
-            android:id="@+id/button2"
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/saoxianer"/>-->
+        <com.bandeng2.lilu.rq_scan.view.QRCodeScanButtonView
+            android:id="@+id/qr_button"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="80dp"></com.bandeng2.lilu.rq_scan.view.QRCodeScanButtonView>
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="go to scan" />
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/qr_button"
+            android:text="@string/fragment_scan_title" />
 
         <TextView
-            android:layout_below="@+id/button2"
+            android:layout_below="@+id/title_text"
             android:id="@+id/result_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/fragment_scan_show_poem" />
     </RelativeLayout>
 
 
