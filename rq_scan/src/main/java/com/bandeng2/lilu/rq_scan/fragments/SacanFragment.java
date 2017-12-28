@@ -1,19 +1,17 @@
-package com.bandeng2.lilu.rq_scan;
+package com.bandeng2.lilu.rq_scan.fragments;
 
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.TextView;
 
+import com.bandeng2.lilu.rq_scan.R;
+import com.bandeng2.lilu.rq_scan.activitys.WebActivity;
 import com.bandeng2.lilu.rq_scan.view.QRCodeScanButtonView;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 

@@ -1,5 +1,6 @@
 package com.bandeng2.lilu.rq_scan;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -16,14 +17,22 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.bandeng2.lilu.rq_scan.fragments.GenerateFragment;
+import com.bandeng2.lilu.rq_scan.fragments.SacanFragment;
+import com.bandeng2.lilu.rq_scan.fragments.SettingFragment;
+
 public class MainNActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
     private Button button;
     private TabHost tabHost;
-    GenerateFragment generateFragment;
-    SettingFragment settingFragment;
-    SacanFragment scanFragment;
+    private GenerateFragment generateFragment;
+    private SettingFragment settingFragment;
+    private SacanFragment scanFragment;
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            "android.permission.READ_EXTERNAL_STORAGE",
+            "android.permission.WRITE_EXTERNAL_STORAGE" };
 
 
 
@@ -41,6 +50,7 @@ public class MainNActivity extends AppCompatActivity {
 //            }
 //        });
         getCameraPermission();
+        verifyStoragePermissions(this);
         tabHost = (TabHost) findViewById(R.id.tab_host);
         tabHost.setup();
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
@@ -103,6 +113,22 @@ public class MainNActivity extends AppCompatActivity {
             }
         }else {
             //这个说明系统版本在6.0之下，不需要动态获取权限。
+        }
+    }
+
+
+    public static void verifyStoragePermissions(Activity activity) {
+
+        try {
+            //检测是否有写的权限
+            int permission = ActivityCompat.checkSelfPermission(activity,
+                    "android.permission.WRITE_EXTERNAL_STORAGE");
+            if (permission != PackageManager.PERMISSION_GRANTED) {
+                // 没有写的权限，去申请写的权限，会弹出对话框
+                ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE,REQUEST_EXTERNAL_STORAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

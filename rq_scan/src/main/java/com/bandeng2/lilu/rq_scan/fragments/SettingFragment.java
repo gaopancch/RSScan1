@@ -1,4 +1,4 @@
-package com.bandeng2.lilu.rq_scan;
+package com.bandeng2.lilu.rq_scan.fragments;
 
 
 import android.content.Intent;
@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.bandeng2.lilu.rq_scan.MainActivity;
+import com.bandeng2.lilu.rq_scan.R;
 
 
 /**

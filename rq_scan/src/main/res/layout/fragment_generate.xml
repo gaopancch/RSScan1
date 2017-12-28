@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bandeng2.lilu.rq_scan.GenerateFragment">
+    tools:context="com.bandeng2.lilu.rq_scan.fragments.GenerateFragment">
 
 
     <RelativeLayout
@@ -12,19 +12,28 @@
         <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:layout_marginRight="20dp"
             android:hint="@string/fragment_generate_input_content" />
+        <Button
+            android:id="@+id/button_change_center_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/editText"
+            android:text="@string/fragment_generate_change_center_image" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_centerInParent="true"
-            android:layout_below="@id/editText" />
+            android:layout_below="@id/button_change_center_image" />
         <Button
             android:id="@+id/button_generate"
             android:layout_width="match_parent"

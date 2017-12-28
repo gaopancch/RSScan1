@@ -4,12 +4,24 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_main_n">扫仙儿</string>
+    <string name="error_read_write_sd_permission">出现错误，请检查是否授予程序sd卡读写权限</string>
+    <string name="image_saved">图片保存，请到相册查看</string>
+    <string name="assuer">确定</string>
+    <string name="input_not_null">输入不能为空</string>
+
+    <string name="qr_image_saved">保存二维码</string>
+    <string name="qr_image_saved_message">你确定要保存本二维码到相册吗？如果确定，请在下方输入保存后的图片名称并点击确定</string>
+    <string name="qr_image_saved2">保存二维码</string>
+    <string name="qr_image_saved9">保存二维码</string>
+    <string name="qr_image_s4aved">保存二维码</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="fragment_generate_input_content">在这里输入你想要生成二维码的内容...</string>
     <string name="fragment_generate_generate">生成二维码</string>
+    <string name="fragment_generate_change_center_image">自定义二维码中心图片</string>
 
     <string name="fragment_scan_go_scan">扫描二维码</string>
     <string name="fragment_scan_title">扫描二维码</string>

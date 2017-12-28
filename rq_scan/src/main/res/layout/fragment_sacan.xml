@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bandeng2.lilu.rq_scan.SacanFragment">
+    tools:context="com.bandeng2.lilu.rq_scan.fragments.SacanFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
