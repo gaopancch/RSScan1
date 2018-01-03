@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.bandeng2.lilu.rq_scan.MainActivity;
 import com.bandeng2.lilu.rq_scan.R;
 
 
@@ -35,9 +34,7 @@ public class SettingFragment extends Fragment {
         buttonToM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setClass(getActivity(),MainActivity.class);
-                startActivity(intent);
+
             }
         });
         return contentView;

@@ -21,6 +21,16 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_height="80dp"></com.bandeng2.lilu.rq_scan.view.QRCodeScanButtonView>
+
+        <com.bandeng2.lilu.rq_scan.view.QRCodeScanButtonView
+            android:id="@+id/qr_scan_native_btn"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/qr_button"></com.bandeng2.lilu.rq_scan.view.QRCodeScanButtonView>
+
         <TextView
             android:id="@+id/title_text"
             android:layout_centerHorizontal="true"
@@ -30,7 +40,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@+id/qr_button"
+            android:layout_below="@+id/qr_scan_native_btn"
             android:text="@string/fragment_scan_title" />
 
         <TextView

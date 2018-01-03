@@ -1,4 +1,4 @@
-package com.bandeng2.lilu.rq_scan;
+package com.bandeng2.lilu.rq_scan.activitys;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.bandeng2.lilu.rq_scan.R;
 import com.bandeng2.lilu.rq_scan.fragments.GenerateFragment;
 import com.bandeng2.lilu.rq_scan.fragments.SacanFragment;
 import com.bandeng2.lilu.rq_scan.fragments.SettingFragment;
@@ -67,11 +68,12 @@ public class MainNActivity extends AppCompatActivity {
                     //add/replace fragment second
                     generateFragment =  new GenerateFragment();
                     ft.replace(android.R.id.tabcontent, generateFragment, "frag");
-                } else if (TextUtils.equals("setting", tabId)) {
-                    //add/replace fragment third
-                    settingFragment = new SettingFragment();
-                    ft.replace(android.R.id.tabcontent, settingFragment, "frag");
                 }
+//                else if (TextUtils.equals("setting", tabId)) {
+//                    //add/replace fragment third
+//                    settingFragment = new SettingFragment();
+//                    ft.replace(android.R.id.tabcontent, settingFragment, "frag");
+//                }
                 ft.commit();
             }
         });
@@ -79,8 +81,8 @@ public class MainNActivity extends AppCompatActivity {
                 .setContent(new DummyTabFactory(this)));
         tabHost.addTab(tabHost.newTabSpec("generate").setIndicator("generate")//setIndicator 设置标签样式
                 .setContent(new DummyTabFactory(this))); //setContent 点击标签后触发
-        tabHost.addTab(tabHost.newTabSpec("setting").setIndicator("setting")
-                .setContent(new DummyTabFactory(this)));
+//        tabHost.addTab(tabHost.newTabSpec("setting").setIndicator("setting")
+//                .setContent(new DummyTabFactory(this)));
 
 
     }

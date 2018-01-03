@@ -53,6 +53,8 @@ public class ImageScanActivity extends Activity {
 
     public static int GET_IMAGE_REQUEST_CODE = 3303;
 
+//    public static int SCAN_IMAGE_REQUEST_CODE = 3304;
+
     private Intent mIntent;
 
     @SuppressLint("HandlerLeak")

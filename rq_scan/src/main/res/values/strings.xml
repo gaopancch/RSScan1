@@ -11,7 +11,6 @@
 
     <string name="qr_image_saved">保存二维码</string>
     <string name="qr_image_saved_message">你确定要保存本二维码到相册吗？如果确定，请在下方输入保存后的图片名称并点击确定</string>
-    <string name="qr_image_saved2">保存二维码</string>
     <string name="qr_image_saved9">保存二维码</string>
     <string name="qr_image_s4aved">保存二维码</string>
 
@@ -23,6 +22,7 @@
     <string name="fragment_generate_generate">生成二维码</string>
     <string name="fragment_generate_change_center_image">自定义二维码中心图片</string>
 
+    <string name="fragment_scan_go_scan_native_image">本地图片扫描</string>
     <string name="fragment_scan_go_scan">扫描二维码</string>
     <string name="fragment_scan_title">扫描二维码</string>
     <string name="fragment_scan_show_poem">

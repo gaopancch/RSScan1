@@ -50,10 +50,20 @@ public class QRCodeScanButtonView extends LinearLayout {
                 onClickListener.onClick(view);
             }
         });
+        imageView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickListener.onClick(view);
+            }
+        });
     }
 
     public void setOnClickListener(OnClickListener l){
         onClickListener = l;
+    }
+
+    public void setText(String str){
+        textView.setText(str);
     }
 
 }
